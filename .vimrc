@@ -11,27 +11,9 @@ set ts=2 sw=2
 set relativenumber
 set laststatus=2
 
-call plug#begin('~/configs/.vim/plugged')
-
-" Themes
-Plug 'morhetz/gruvbox'
-
-" IDE
-Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-
-call plug#end()
+so ~/configs/.vim/plugins.vim
+so ~/configs/.vim/plugin-config.vim
+so ~/configs/.vim/maps.vim
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
-let NERDTreeQuitOnOpen=1
-
-let mapleader=" "
-
-nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>nt :NERDTreeFind<CR>
-
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-
