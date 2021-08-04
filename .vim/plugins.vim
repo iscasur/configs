@@ -15,6 +15,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'mattn/emmet-vim'
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
