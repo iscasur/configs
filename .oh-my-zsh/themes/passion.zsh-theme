@@ -50,19 +50,20 @@ function login_info() {
 
 # directory
 function directory() {
-    local color="%{$fg_no_bold[cyan]%}";
+    local color="%{$fg_bold[cyan]%}";
     # REF: https://stackoverflow.com/questions/25944006/bash-current-working-directory-with-replacing-path-to-home-folder
     local directory="${PWD/#$HOME/~}";
+    # local directory="%c";
     local color_reset="%{$reset_color%}";
     echo "${color}[${directory}]${color_reset}";
 }
 
 
 # git
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[blue]%}git(%{$fg_no_bold[red]%}";
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[green]%}git(%{$fg_bold[red]%}";
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} ";
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[blue]%}) 🔥";
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[blue]%})";
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[green]%}) 🔥";
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%})";
 
 function update_git_status() {
     GIT_STATUS=$(git_prompt_info);
@@ -120,20 +121,20 @@ output_command_execute_after() {
     time="${color_time}${time}${color_reset}";
 
     # cost
-    local time_end="$(current_time_millis)";
-    local cost=$(bc -l <<<"${time_end}-${COMMAND_TIME_BEIGIN}");
-    COMMAND_TIME_BEIGIN="-20200325"
-    local length_cost=${#cost};
-    if [ "$length_cost" = "4" ];
-    then
-        cost="0${cost}"
-    fi
-    cost="[cost ${cost}s]"
-    local color_cost="$fg_no_bold[cyan]";
-    cost="${color_cost}${cost}${color_reset}";
+    # local time_end="$(current_time_millis)";
+    # local cost=$(bc -l <<<"${time_end}-${COMMAND_TIME_BEIGIN}");
+    # COMMAND_TIME_BEIGIN="-20200325"
+    # local length_cost=${#cost};
+    # if [ "$length_cost" = "4" ];
+    # then
+    #     cost="0${cost}"
+    # fi
+    # cost="[cost ${cost}s]"
+    # local color_cost="$fg_no_bold[cyan]";
+    # cost="${color_cost}${cost}${color_reset}";
 
-    echo -e "${time} ${cost} ${cmd}";
-    echo -e "";
+    # echo -e "${time} ${cost} ${cmd}";
+    # echo -e "";
 }
 
 
