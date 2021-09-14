@@ -15,5 +15,5 @@ so ~/configs/.vim/plugins.vim
 so ~/configs/.vim/plugin-config.vim
 so ~/configs/.vim/maps.vim
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+set background=dark
+colorscheme palenight

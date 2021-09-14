@@ -4,7 +4,8 @@ call plug#begin('~/configs/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 
 " Themes
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " IDE
 Plug 'easymotion/vim-easymotion'
