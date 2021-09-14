@@ -20,6 +20,7 @@ Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 
 " Autocomplete
+Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
